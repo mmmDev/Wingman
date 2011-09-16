@@ -45,18 +45,7 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.facerec);
 		
-		// Create the adView
-	    adView = new AdView(this, AdSize.BANNER, MY_AD_UNIT_ID);
-
-	    // Lookup your LinearLayout assuming it’s been given
-	    // the attribute android:id="@+id/mainLayout"
-	    LinearLayout layout = (LinearLayout) findViewById(R.id.facerecad);
-
-	    // Add the adView to it
-	    layout.addView(adView);
-
-	    // Initiate a generic request to load it with an ad
-	    adView.loadAd(new AdRequest());
+		
 		
 		// Setup touch listener, to detect x,y coordinates of touch events
 		ImageView image = (ImageView) findViewById(R.id.imageView1);
