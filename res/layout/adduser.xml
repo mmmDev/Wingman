@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:weightSum="1">
+    <LinearLayout android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_gravity="top" android:layout_height="wrap_content" android:layout_width="fill_parent">
+        <EditText android:id="@+id/editText1" android:hint="First name" android:layout_gravity="top" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+            <requestFocus></requestFocus>
+        </EditText>
+        <EditText android:id="@+id/editText2" android:hint="Last name" android:layout_gravity="top" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+        <EditText android:id="@+id/editText3" android:hint="Description" android:inputType="textMultiLine" android:layout_gravity="top" android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout4" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:layout_height="wrap_content" android:text="Single" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView1" android:layout_weight="1" android:layout_width="0dp"></TextView>
+            <ToggleButton android:id="@+id/toggleButton1" android:layout_height="wrap_content" android:textOn="Single!" android:textOff="Taken!" android:layout_gravity="right" android:layout_weight="1" android:layout_width="wrap_content"></ToggleButton>
+        </LinearLayout>
+    </LinearLayout>
+
+    
+    <RatingBar android:id="@+id/ratingBar1" android:layout_gravity="top" android:layout_height="wrap_content" android:layout_width="wrap_content"></RatingBar>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:layout_gravity="bottom" android:layout_height="fill_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
+            <Button android:id="@+id/buttonOk" android:text="OK" android:layout_weight="1" android:layout_gravity="bottom" android:layout_height="wrap_content" android:layout_width="fill_parent"></Button>
+            <Button android:id="@+id/buttonCancel" android:text="Cancel" android:layout_weight="1" android:layout_gravity="bottom" android:layout_height="wrap_content" android:layout_width="fill_parent"></Button>
+        </LinearLayout>
+    </LinearLayout>
+   
+    
+</LinearLayout>

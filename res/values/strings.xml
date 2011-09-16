@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Welcome to Wingman! Please press screen to start identifying people.</string>
+    <string name="app_name">Wingman</string>
+    <string name="progressText1">Initializing flux capacitor!</string>
+    <string name="progressText2">Running transmogryphor!</string>
+    <string name="progressText3">HAL_9000 algorithm initiated!</string>
+    <string name="progressText4">Overmind spawned!</string>
+</resources>
