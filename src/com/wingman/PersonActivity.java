@@ -187,6 +187,10 @@ public class PersonActivity extends Activity{
 
 	private void doNewUser(PersonModel pm) {
 		// TODO Auto-generated method stub
+		ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar1);
+		pb.setEnabled(false);
+		pb.setVisibility(View.GONE);
+		
 		TextView text1 = (TextView) findViewById(R.id.textView1);
 		
 		text1.setText("Person not found in database! Would you like to add this person?");
