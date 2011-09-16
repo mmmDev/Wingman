@@ -34,9 +34,9 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 
 	private static final String TAG = "FaceRecActivity";
 	private static final String IMAGE_PATH = "/sdcard/wingman/LatestWingman.jpg";
-	private static final String MY_AD_UNIT_ID = "a14e50830f3a4d4";
+	//private static final String MY_AD_UNIT_ID = "a14e50830f3a4d4";
 	private static Photo photo = null;
-	private AdView adView;
+	//private AdView adView;
 	
 	
 	public void onCreate(Bundle icicle) {

@@ -23,6 +23,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class PersonActivity extends Activity{
@@ -133,7 +134,9 @@ public class PersonActivity extends Activity{
 		//	e.printStackTrace();
 		//}
 		
-		
+		ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar1);
+		pb.setEnabled(false);
+		pb.setVisibility(View.GONE);
 		
 		TextView text1 = (TextView) findViewById(R.id.textView1);
 		text1.setText(sb.toString());

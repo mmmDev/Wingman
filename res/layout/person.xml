@@ -6,22 +6,44 @@ android:orientation="vertical" android:id="@+id/fullscreenlayout">
 <LinearLayout android:id="@+id/personad" android:layout_height="wrap_content" android:layout_width="fill_parent" android:orientation="vertical"></LinearLayout>
 <ScrollView 
 xmlns:android="http://schemas.android.com/apk/res/android" 
-android:layout_width="fill_parent" android:layout_height="fill_parent"> 
+android:layout_width="fill_parent" android:layout_height="wrap_content"> 
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:orientation="vertical" android:layout_height="fill_parent" android:layout_gravity="top">
+  android:orientation="vertical" android:layout_height="wrap_content" >
     
   	    
-    	<ImageView android:layout_width="150dp" android:id="@+id/imageView1" android:src="@android:drawable/screen_background_dark_transparent" android:layout_height="150dp" android:layout_weight="1" android:layout_gravity="top"></ImageView>
-    	<TextView android:text="1" android:id="@+id/textView1" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="top"></TextView>
+    	<ImageView android:layout_width="150dip" android:id="@+id/imageView1" android:src="@android:drawable/screen_background_dark_transparent" android:layout_height="150dip" android:layout_weight="1" android:layout_gravity="center"></ImageView>
+    	<RelativeLayout android:id="@+id/linearLayout2" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:layout_gravity="center" 
+		android:orientation="horizontal">
+			<ProgressBar android:id="@+id/progressBar1" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="top" 
+				android:layout_weight="1" 
+				android:layout_marginLeft="10dip" android:layout_centerInParent="true"/>
+			
+			<TextView android:text="Loading..." 
+				android:id="@+id/textView1" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="left" 
+				 
+				android:layout_weight="1" 
+				android:layout_toRightOf="@id/progressBar1"
+				android:layout_marginLeft="10dip" android:layout_centerInParent="true"/>
+	</RelativeLayout>
     	
 
-    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:baselineAligned="true" android:layout_weight="1" android:layout_height="fill_parent" android:orientation="horizontal" android:layout_gravity="top">
-        <Button android:text="Button" android:id="@+id/button1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="top"></Button>
-        <Button android:text="Button" android:id="@+id/button2" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
-        <Button android:text="Button" android:id="@+id/button3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
-    </LinearLayout>
+    
 </LinearLayout>
 </ScrollView>
+<LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:baselineAligned="true" android:layout_weight="1" android:layout_height="fill_parent" android:orientation="horizontal" android:layout_gravity="bottom">
+        <Button android:text="Button" android:id="@+id/button1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
+        <Button android:text="Button" android:id="@+id/button2" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
+        <Button android:text="Button" android:id="@+id/button3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
+    </LinearLayout>
 </LinearLayout>
