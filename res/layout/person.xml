@@ -1,55 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" 
-	android:layout_height="fill_parent"
-	android:orientation="vertical" 
-	android:background="#6F6F86"
-	android:id="@+id/fullscreenlayout">
-<LinearLayout 
-	android:id="@+id/personad" 
-	android:layout_height="wrap_content" 
-	android:layout_width="fill_parent" 
-	android:orientation="vertical"></LinearLayout>
-	
-	<ScrollView 
-	xmlns:android="http://schemas.android.com/apk/res/android" 
-	android:layout_width="fill_parent" android:layout_height="fill_parent"> 
-		<LinearLayout
-		  xmlns:android="http://schemas.android.com/apk/res/android"
-		  android:layout_width="fill_parent"
-		  android:orientation="vertical" android:layout_height="fill_parent" android:layout_gravity="top">
-		  	
-		  	<LinearLayout 
-		    	android:id="@+id/linearLayout2" 
-		    	android:layout_width="fill_parent" 
-		    	android:baselineAligned="true" 
-		    	android:layout_weight="1" 
-		    	android:layout_height="fill_parent" 
-		    	android:orientation="horizontal" 
-		    	android:layout_gravity="top">
-				  	<ImageView android:layout_width="wrap_content" 
-					  	android:id="@+id/imageView1" 
-					  	android:src="@android:drawable/screen_background_dark_transparent" 
-					  	android:layout_height="0dp" 
-					  	android:layout_weight="1" 
-					  	android:layout_gravity="top" />
-			</LinearLayout>
-			
-		    <TextView android:text="Loading..." android:id="@+id/textView1" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="top"></TextView>
-		
-		    <LinearLayout 
-		    	android:id="@+id/linearLayout2" 
-		    	android:layout_width="fill_parent" 
-		    	android:baselineAligned="true" 
-		    	android:layout_weight="1" 
-		    	android:layout_height="fill_parent" 
-		    	android:orientation="horizontal" 
-		    	android:layout_gravity="top">
-			        <Button android:text="." android:id="@+id/button1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="top"></Button>
-			        <Button android:text="." android:id="@+id/button2" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
-			        <Button android:text="." android:id="@+id/button3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
-		    </LinearLayout>
-		    
-		</LinearLayout>
-	</ScrollView>
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+android:background="#6F6F86"
+android:orientation="vertical" android:id="@+id/fullscreenlayout">
+<LinearLayout android:id="@+id/personad" android:layout_height="wrap_content" android:layout_width="fill_parent" android:orientation="vertical"></LinearLayout>
+<ScrollView 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:layout_width="fill_parent" android:layout_height="fill_parent"> 
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:orientation="vertical" android:layout_height="fill_parent" android:layout_gravity="top">
+    
+  	    
+    	<ImageView android:layout_width="150dp" android:id="@+id/imageView1" android:src="@android:drawable/screen_background_dark_transparent" android:layout_height="150dp" android:layout_weight="1" android:layout_gravity="top"></ImageView>
+    	<TextView android:text="1" android:id="@+id/textView1" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="top"></TextView>
+    	
+
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:baselineAligned="true" android:layout_weight="1" android:layout_height="fill_parent" android:orientation="horizontal" android:layout_gravity="top">
+        <Button android:text="Button" android:id="@+id/button1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="top"></Button>
+        <Button android:text="Button" android:id="@+id/button2" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
+        <Button android:text="Button" android:id="@+id/button3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_gravity="top"></Button>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
 </LinearLayout>
