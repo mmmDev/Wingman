@@ -159,7 +159,7 @@ public class PersonActivity extends Activity{
 				startActivity(myIntent);
 			}
 		});
-		 
+		
 		button2.setEnabled(true);
 		button2.setText("See descriptions");
 		button2.setOnClickListener(new OnClickListener() {
