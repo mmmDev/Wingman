@@ -136,6 +136,7 @@ public class PersonActivity extends Activity{
 		
 		ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar1);
 		pb.setEnabled(false);
+		pb.setWillNotDraw(true);
 		pb.setVisibility(View.GONE);
 		
 		TextView text1 = (TextView) findViewById(R.id.textView1);
