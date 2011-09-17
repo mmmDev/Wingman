@@ -109,6 +109,8 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 		        	text = "Faces found: " + photo.getFaceCount() + ". Please select which face to recognize.";
 		        } else {
 		        	text = "ERROR! No faces found, please try again.";
+		        	image.setWillNotDraw(true);
+		        	image.setEnabled(false);
 		        }
 		        Toast toast = Toast.makeText(getBaseContext(), text, Toast.LENGTH_LONG);
 				toast.show();
