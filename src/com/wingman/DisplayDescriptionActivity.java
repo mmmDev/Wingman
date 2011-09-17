@@ -48,8 +48,6 @@ public class DisplayDescriptionActivity extends ListActivity {
 		          Toast.LENGTH_LONG).show();
 		
 		new QueryAppharborTask().execute(pm);
-		
-		
 	}
 	
 	
