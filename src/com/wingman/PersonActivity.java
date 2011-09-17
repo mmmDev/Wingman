@@ -23,6 +23,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class PersonActivity extends Activity{
@@ -31,7 +32,7 @@ public class PersonActivity extends Activity{
 	private static final String IMAGE_PATH = "/sdcard/wingman/LatestWingman.jpg";
 	//private static final String APPHARBOR_URL = "http://wingman.apphb.com/";
 	private static final int ADD_NEW_USER_REQUEST = 0;
-	private static final String MY_AD_UNIT_ID = "a14e50830f3a4d4";
+	//private static final String MY_AD_UNIT_ID = "a14e50830f3a4d4";
 	private PersonModel m_pm;
 	
 	
@@ -90,18 +91,7 @@ public class PersonActivity extends Activity{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.person);
 		
-		// Create the adView
-	    AdView adView = new AdView(this, AdSize.BANNER, MY_AD_UNIT_ID);
-
-	    // Lookup your LinearLayout assuming it’s been given
-	    // the attribute android:id="@+id/mainLayout"
-	    LinearLayout layout = (LinearLayout)findViewById(R.id.personad);
-
-	    // Add the adView to it
-	    layout.addView(adView);
-	    
-	    // Initiate a generic request to load it with an ad
-	    adView.loadAd(new AdRequest());
+		
 		
 		Intent i = getIntent();
 		Bundle extras = i.getExtras();
@@ -144,7 +134,10 @@ public class PersonActivity extends Activity{
 		//	e.printStackTrace();
 		//}
 		
-		
+		ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar1);
+		pb.setEnabled(false);
+		pb.setWillNotDraw(true);
+		pb.setVisibility(View.GONE);
 		
 		TextView text1 = (TextView) findViewById(R.id.textView1);
 		text1.setText(sb.toString());
@@ -195,6 +188,10 @@ public class PersonActivity extends Activity{
 
 	private void doNewUser(PersonModel pm) {
 		// TODO Auto-generated method stub
+		ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar1);
+		pb.setEnabled(false);
+		pb.setVisibility(View.GONE);
+		
 		TextView text1 = (TextView) findViewById(R.id.textView1);
 		
 		text1.setText("Person not found in database! Would you like to add this person?");
