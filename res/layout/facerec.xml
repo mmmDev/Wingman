@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1" 
-    android:background="#0E1333"
+    style="@style/MyTheme"
     android:orientation="horizontal">
 
 	<ImageView 

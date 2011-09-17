@@ -37,8 +37,7 @@
         <activity android:name=".AddUserTagActivity"
         	android:label="@string/app_name">
         </activity>
-        <activity android:name=".DisplayDescriptionActivity"
-        
+        <activity android:name=".DisplayDescriptionActivity"        
         	android:label="@string/app_name">
         </activity>
         <activity android:name=".DisplayDescriptionSelectActivity"

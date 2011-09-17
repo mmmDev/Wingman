@@ -22,6 +22,8 @@ import com.wingman.parsers.AppharborWrapper;
 import com.wingman.parsers.FaceComWrapper;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.AsyncTask;
 
 public class DisplayDescriptionActivity extends ListActivity {
@@ -33,7 +35,7 @@ public class DisplayDescriptionActivity extends ListActivity {
 		super.onCreate(bundle);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		//setContentView(R.layout.addusertag);
-		
+		setContentView(R.layout.displaydescription);
 	    
 		Intent i = getIntent();
 		Bundle extras = i.getExtras();
@@ -98,9 +100,15 @@ public class DisplayDescriptionActivity extends ListActivity {
       					*/
       		}
 			 
-    		setListAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContent));
+    		setListAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.descriptionlist_item, listContent));
     		ListView lv = getListView();
+    		//ListView lv = (ListView) findViewById(R.id.description_list);
   		  lv.setTextFilterEnabled(true);
+  		  
+  		  
+  		  // Y U NO DO IT IN XML? :<< Could not find a way to do it. android:background="" and others tried, no effect.
+  		  //Resources res = getResources();
+  		  //lv.setBackgroundColor(res.getColor(R.color.default_background));
 
   		  lv.setOnItemClickListener(new OnItemClickListener() {
   		    public void onItemClick(AdapterView<?> parent, View view,
