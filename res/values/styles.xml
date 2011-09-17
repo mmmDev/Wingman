@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTheme">
+    	<item name="android:windowBackground">@color/default_background</item>
+        <item name="android:background">@color/default_background</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:listViewStyle">@style/MyListView</item>
+    </style>
+    
+    <style name="MyListView">
+      <item name="android:background">@color/default_background</item>
+      <item name="android:cacheColorHint">#00000000</item>
+      <item name="android:windowBackground">@color/default_background</item>
+    </style>
+  
+</resources>
