@@ -70,7 +70,6 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 
 		Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
 		toast.show();
-		//TextView tv = (TextView) findViewById(R.id.textView1);
 		new RecognitionTask().execute(IMAGE_PATH);
 	}
 
@@ -86,15 +85,18 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 		// Execute in UI thread after task completes
 		protected void onPostExecute(Photo p) {
 			photo = p;
-			ProgressBar pd = (ProgressBar) FaceRecActivity.this.findViewById(R.id.progressBar1);
+			
 			//TextView tv = (TextView) findViewById(R.id.textView1);
 		    ImageView image = (ImageView) findViewById(R.id.imageView1);
 			
-		    
-		    
-		    
+		    // Stop progress bars / loading...'s
+		    ProgressBar pd = (ProgressBar) FaceRecActivity.this.findViewById(R.id.progressBar1);
 		    pd.setEnabled(false);
 			pd.setWillNotDraw(true);
+			
+			TextView tv = (TextView) findViewById(R.id.textView1);
+			tv.setWillNotDraw(true);
+			tv.setEnabled(false);
 			
 			if(photo != null)
 			{
@@ -112,7 +114,9 @@ public class FaceRecActivity extends Activity implements OnTouchListener{
 				toast.show();
 
 			} else{
-				TextView tv = (TextView) findViewById(R.id.textView1);
+				tv = (TextView) findViewById(R.id.textView1);
+				tv.setWillNotDraw(false);
+				tv.setEnabled(true);
 				tv.setText("Not found/Error!. Please try again");
 			}
 		}
